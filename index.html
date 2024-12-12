@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciamento de Livros</title>
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <img src="./src/img/logo_livro.png" class="livro">
+        <div class="busca">
+            <p>Buscar por livro</p>
+            <img src="./src/img/lupa.png">
+        </div>
+        <div class="menu">
+            <p>Menu</p>
+            <img src="./src/img/menu-aberto.png" class="menu-aberto">
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="titulo">
+            <h1>Gerenciamento de Livros</h1>
+            <button type="button" onclick="openModal()" id="new">Adicionar Livro</button>
+        </div>
+
+        <main class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>Gênero</th>
+                        <th>Ano</th>
+                        <th class="acao">Editar</th>
+                        <th class="acao">Excluir</th>
+                    </tr>
+                </thead>
+                <tbody id="livrosTableBody"></tbody>
+            </table>
+        </main>
+
+        <div class="modal-container" id="modal-container" style="display: none;">
+            <div class="modal">
+                <h2>Adicionar/Editar Livro</h2>
+                <form id="livroForm">
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" name="titulo" placeholder="Título do livro" required>
+
+                    <label for="autor">Autor:</label>
+                    <input type="text" id="autor" name="autor" placeholder="Autor do livro" required>
+
+                    <label for="genero">Gênero:</label>
+                    <input type="text" id="genero" name="genero" placeholder="Gênero do livro" required>
+
+                    <label for="ano">Ano de Publicação:</label>
+                    <input type="date" id="ano" name="dataLancamento" placeholder="Ano de publicação" required>
+
+                    <div class="modal-actions">
+                        <button type="submit" id="btnSalvar">Salvar</button>
+                        <button type="button" onclick="closeModal()" id="btnCancelar">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
