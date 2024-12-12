@@ -1,0 +1,250 @@
+body, h1, h2, p, button, input, table, th, td {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+    margin-bottom: 30px;
+    background-color: #fff;
+}
+
+.header img {
+    width: 50px;
+}
+
+.header p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.livro {
+    margin-left: 20px;
+}
+
+.busca {
+    width: 350px;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    border: #000 1px solid;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.busca p {
+    margin-left: 30px;
+}
+
+.menu {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.menu-aberto {
+    margin-right: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1800px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.titulo {
+    background: #6200ea;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo img {
+    height: 40px;
+}
+
+.titulo h1 {
+    font-size: 24px;
+    flex: 1;
+    margin-left: 10px;
+}
+
+.titulo button {
+    background: #03dac6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.titulo button:hover {
+    background: #029c86;
+}
+
+.table-container {
+    padding: 20px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #fff;
+}
+
+thead {
+    background-color: #6200ea;
+    color: #fff;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    font-size: 24px;
+}
+
+th {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.acao {
+    text-align: center;
+}
+
+button.edit, button.delete {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+button.edit {
+    background: #ffab00;
+}
+
+button.edit:hover {
+    background: #e69900;
+}
+
+button.delete {
+    background: #d32f2f;
+}
+
+button.delete:hover {
+    background: #b71c1c;
+}
+
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: white;
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #6200ea;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 24px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#btnSalvar {
+    background: #6200ea;
+    color: #fff;
+}
+
+#btnSalvar:hover {
+    background: #4b00c7;
+}
+
+#btnCancelar {
+    background: #d32f2f;
+    color: #fff;
+}
+
+#btnCancelar:hover {
+    background: #b71c1c;
+}
